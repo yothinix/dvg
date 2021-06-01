@@ -65,3 +65,6 @@ class Query(graphene.ObjectType):
             .select_related('author')
             .filter(tags__name__iexact=tag)
         )
+
+
+schema = graphene.Schema(query=Query)
