@@ -7,16 +7,34 @@
 
 <script>
 import PostList from "@/components/PostList";
+import gql from 'graphql-tag'
 
 export default {
-  name: "AllPosts",
+  name: 'AllPosts',
   components: {
     PostList,
   },
-  data() {
-    return {
-      allPosts: null,
-    };
+  apollo: {
+    allPosts: gql`query {
+      allPosts {
+        title
+        subtitle
+        publishDate
+        published
+        metaDescription
+        slug
+        author {
+          user {
+            username
+            firstName
+            lastName
+          }
+        }
+        tags {
+          name
+        }
+      }
+    }`,
   },
-};
+}
 </script>

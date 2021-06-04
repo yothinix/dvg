@@ -1,7 +1,7 @@
 <template>
   <div>
     <ol class="post-list">
-      <li class="post" v-for="post in publishPosts" :key="post.title">
+      <li class="post" v-for="post in publishedPosts" :key="post.title">
         <span class="post__title">
           <router-link
             :to="`/post/${post.slug}`"
