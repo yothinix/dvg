@@ -8,9 +8,9 @@ import AllPosts from '@/components/AllPosts'
 Vue.use(VueRouter)
 
 const routes = [
-  { paht: '/author/:username', component: Author },
-  { paht: '/post/:slug', component: Post },
-  { paht: '/tag/:slug', component: PostsByTag },
+  { path: '/author/:username', component: Author },
+  { path: '/post/:slug', component: Post },
+  { path: '/tag/:slug', component: PostsByTag },
   { path: '/', component: AllPosts },
   { path: '/about', name: 'About', component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')}
 ]
